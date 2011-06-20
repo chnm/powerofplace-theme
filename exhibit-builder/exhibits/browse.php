@@ -16,7 +16,9 @@
     	<div class="exhibit <?php if ($exhibitCount%2==1) echo ' even'; else echo ' odd'; ?>">
     		<h2><?php echo link_to_exhibit(); ?></h2>
     		<div class="description"><?php echo exhibit('description'); ?></div>
+    		<?php if ($exhibit->Tags): ?>
     		<p class="tags"><span style="color: #c90; font-weight: bold;">Tags:&nbsp;</span><?php echo tag_string(get_current_exhibit(), uri('exhibits/browse/tag/')); ?></p>
+    	    <?php endif; ?>
     	</div>
     <?php endwhile; ?>
     </div>
