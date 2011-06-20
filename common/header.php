@@ -37,7 +37,13 @@
 
 		<div id="header">
 			<div id="header-wrap">
-				<div id="login">Login/Register</div>
+				<div id="login">
+				    <?php if ($user = current_user()): ?>
+                    Welcome, <?php echo link_to_admin_home_page($user->first_name); ?> | <a href="<?php echo html_escape(uri('users/logout'));?>" id="logout">Log Out</a></p>
+                    <?php else: ?>
+                        <?php echo link_to_admin_home_page('Log In'); ?>
+                    <?php endif; ?>
+				</div>
 				<div id="site-title"><?php echo link_to_home_page(custom_display_logo()); ?></div>
 				<div id="primary-nav">
 					<ul class="navigation">
