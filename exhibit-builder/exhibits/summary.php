@@ -1,6 +1,6 @@
 <?php head(array('title' => html_escape('Summary of ' . exhibit('title')),'bodyid'=>'exhibit','bodyclass'=>'summary')); ?>
 <div id="nav-container">
-	<?php echo exhibit_builder_page_nav();?>
+	<?php echo exhibit_builder_page_nav($exhibit->getFirstSection());?>
 </div>
 <div id="primary">
 <h1><?php echo html_escape(exhibit('title')); ?></h1>
