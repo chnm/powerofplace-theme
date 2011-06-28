@@ -344,7 +344,7 @@ a:hover,a:focus                     { z-index: 5;}
 .element-set, .image-text-group     { margin-top:36px;border-top: 1px dotted #987;}
 .element-text p                     { font-size: 1em;line-height: 1.5em;margin-bottom: 1.5em;}
 
-.image-text-group .exhibit-text p   {padding-top: 1.5em;}
+.image-text-group .exhibit-text     {padding-top: 1.5em;}
 
 /* == Simple Pages == */
 ul.simple-pages-navigation          {/*display:none;*/}
